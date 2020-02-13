@@ -1,12 +1,12 @@
 <?php
 
 $EmailFrom = "chriscoyier@gmail.com";
-$EmailTo = "CHANGE-THIS@YOUR-DOMAIN.com";
+$EmailTo = "osfcwebsitetest@protonmail.com";
 $Subject = "Nice & Simple Contact Form by CSS-Tricks";
-$Name = Trim(stripslashes($_POST['Name'])); 
-$Tel = Trim(stripslashes($_POST['Tel'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message'])); 
+$Name = Trim(stripslashes($_POST['Name']));
+$Tel = Trim(stripslashes($_POST['Tel']));
+$Email = Trim(stripslashes($_POST['Email']));
+$Message = Trim(stripslashes($_POST['Message']));
 
 // validation
 $validationOK=true;
@@ -30,10 +30,10 @@ $Body .= "Message: ";
 $Body .= $Message;
 $Body .= "\n";
 
-// send email 
+// send email
 $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
-// redirect to success page 
+// redirect to success page
 if ($success){
   print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
 }
